@@ -1,8 +1,11 @@
 #include<bits/stdc++.h>
 using namespace std;
-int dp1[1005];
-int dp2[1005];
-int dp3[1005];
+int mod=1e9+7;
+int dp1[10005];
+int dp2[10005];
+
+
+int dp3[10005];
 
 int main(){
 	ios::sync_with_stdio(0); cin.tie(0); 
@@ -12,7 +15,6 @@ int main(){
 	dp1[1]=1;
 	dp2[1]=1;
 	dp3[1]=1;
-	int mod=1e9+7;
 	for(int i=2;i<=n;i++){
 		dp1[i]=dp1[i-1]+dp1[i-2]+dp2[i-2]+dp3[i-2];		
 		dp2[i]=dp2[i-1]+dp1[i-1];
